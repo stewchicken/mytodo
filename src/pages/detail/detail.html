@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>task details </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col>{{task?.title}}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>{{task?.detail}}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col><button ion-button block (click)="deleteTask()">Delete Task</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

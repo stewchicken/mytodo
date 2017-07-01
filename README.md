@@ -24,3 +24,27 @@ $ ionic cordova run ios
 
 Substitute ios for android if not on a Mac.
 
+```generate detail page
+ ionic g page detail
+
+npm install --save @ionic/storage
+
+``` build app
+http://ionicframework.com/docs/intro/deploying/
+
+ionic cordova build --release android
+
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore my-release-key.jks  /home/yw/ionic2/my-places/platforms/android/build/outputs/apk/android-release-unsigned.apk  my-alias
+
+Built the following apk(s):
+/home/yw/ionic2/mytodo/platforms/android/build/outputs/apk/android-release-unsigned.apk
+
+/home/yw/Android/Sdk/build-tools/26.0.0/zipalign -v 4 android-release-unsigned.apk mytodo.apk
+
+ ionic cordova plugin add https://github.com/moust/cordova-plugin-videoplayer.git --save
+
+npm install --save @ionic-native/video-player
+
+ionic cordova plugin add cordova-plugin-filechooser --save
+
+npm install --save @ionic-native/file-chooser

@@ -1,17 +1,18 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Contact
+      Workout
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-left></ion-icon>
-      @ionicframework
-    </ion-item>
-  </ion-list>
+  <img src="./assets/video/tabata1.png"  (click)="playTabata('tabata1.mp4')"  style="width:100%" alt="tabata workout1"/>
+  <button ion-button block (click)="playTabata('tabata1.mp4')">Tabata1</button>
+   <img src="./assets/video/tabata2.png" (click)="playTabata('tabata2.mp4')" style="width:100%" alt="tabata workout2"/>
+  <button ion-button block (click)="playTabata('tabata2.mp4')">Tabata2</button>
+  <img src="./assets/video/tabata3.png"  (click)="playTabata('tabata3.mp4')" style="width:100%" alt="tabata workout3"/>
+  <button ion-button block (click)="playTabata('tabata3.mp4')">Tabata3</button>
+  <img src="./assets/video/tabata4.png"  (click)="playTabata('tabata4.mp4')" style="width:100%" alt="tabata workout4"/>
+  <button ion-button block (click)="playTabata('tabata4.mp4')">Tabata4</button>
 </ion-content>
