@@ -25,7 +25,7 @@ http://ionicframework.com/docs/intro/deploying/
 
 
 ### delete task
-![delete task](image/listtask.png)
+![delete task](image/deletetask.png)
 
 
 ###  workouts
