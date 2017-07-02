@@ -1,11 +1,19 @@
 import { Storage } from '@ionic/storage';
 import { Injectable } from "@angular/core";
 import { Task } from "../model/task.model";
+import { Video } from "../model/video.model";
 
 @Injectable()
 export class TaskService {
-    private tasks:Task[];
+    private tasks: Task[];
+    private videos: Video[];
     constructor(private storage: Storage) {
+    }
+
+    addVideo(video: Video) {
+        this.videos.push(video);
+        this.storage.set("videos", this.videos);
+        return Promise.resolve(this.videos);
     }
 
     addTask(task: Task) {
@@ -13,8 +21,21 @@ export class TaskService {
         this.storage.set("tasks", this.tasks);
     }
 
-    removeTask(task: Task) {
+    removeVideo(video: Video) {
+        let index = -1;
+        for (let i = 0; i < this.videos.length; i++) {
+            if (this.videos[i].id == video.id) {
+                index = i;
+            }
+        }
+        if (index != -1) {
+            this.videos.splice(index, 1);
+            this.storage.set('videos', this.videos);
+        }
 
+    }
+
+    removeTask(task: Task) {
         let index = -1;
         for (let i = 0; i < this.tasks.length; i++) {
             if ((this.tasks[i].title == task.title) &&
@@ -25,44 +46,43 @@ export class TaskService {
 
         if (index != -1) {
             this.tasks.splice(index, 1);
-            this.storage.set('tasks', this.tasks);
+            this.storage.set("tasks", this.tasks);
         }
 
-        /*
-        this.storage.get('tasks').then(
-            (tasks) => {
-                tasks=JSON.parse(tasks);
-                let tmptasks = tasks == null ? [] : tasks;
-                let index = -1;
-                for (let i = 0; i < tasks.length; i++) {
-                    console.log("tasks[i].title=" +tasks[i].title);
-                    console.log("task.title=" +task.title);
-                    if (tasks[i].title == task.title) {
-                        index = i;
-                        break;
-                    }
-                }
-                console.log("index= "+index);
-                if (index != -1) {
-                    tmptasks.splice(index,1);
-                    this.storage.set('tasks', JSON.stringify( tmptasks));
-                }
+    }
+
+    removeAllViedos() {
+        return this.storage.remove("videos").then(
+            (videos) => {
+                console.log(videos);
+                return this.videos = [];
             }
         );
-        */
     }
 
     getTasks() {
-        //it will return a Promise - > then will return a promise
-        //this.storage.remove("tasks");
-        return this.storage.get('tasks').then(
+        return this.storage.get("tasks").then(
             (tasks) => {
                 if (tasks == null) {
-                    this.tasks=[];
+                    this.tasks = [];
                     return this.tasks;
                 } else {
                     this.tasks = tasks.slice()
                     return this.tasks;
+                }
+            }
+        );
+    }
+
+    getVideos() {
+        return this.storage.get("videos").then(
+            (videos) => {
+                if (videos == null) {
+                    this.videos = [];
+                    return this.videos;
+                } else {
+                    this.videos = videos.slice()
+                    return this.videos;
                 }
             }
         );

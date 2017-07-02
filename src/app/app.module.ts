@@ -16,6 +16,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { TaskService } from "../service/task.service";
 import { TaskPage } from "../pages/task/task";
+import { YoutubePage } from "../pages/youtube/youtube";
+import { YoutubepipePipe } from '../pipes/youtubepipe/youtubepipe';
 @NgModule({
   declarations: [
     MyApp,
@@ -24,7 +26,9 @@ import { TaskPage } from "../pages/task/task";
     HomePage,
     TabsPage,
     DetailPage,
-    TaskPage
+    TaskPage,
+    YoutubePage,
+    YoutubepipePipe
   ],
   imports: [
     BrowserModule,
@@ -39,7 +43,8 @@ import { TaskPage } from "../pages/task/task";
     HomePage,
     TabsPage,
     DetailPage,
-    TaskPage
+    TaskPage,
+    YoutubePage
   ],
   providers: [
     StatusBar,
