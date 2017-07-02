@@ -1,3 +1,4 @@
+# It is a app to manage TODO tasks, workouts, youtube videos for myself
 
 ### install ionic and cordova
 
@@ -29,6 +30,9 @@ http://ionicframework.com/docs/intro/deploying/
 
 ###  workouts
 ![workout](image/workouts.png)
+
+### add delete list youtube videos
+![youtube](image/youtube.png)
 
 ###  about
 ![workout](image/about.png)

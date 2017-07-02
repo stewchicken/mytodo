@@ -11,7 +11,7 @@ import { NgForm } from "@angular/forms";
   templateUrl: 'youtube.html',
 })
 export class YoutubePage {
-  @ViewChild("f")
+  @ViewChild("f") // here refers to html's ngForm
   fForm: NgForm;
 
   videos: Video[];
