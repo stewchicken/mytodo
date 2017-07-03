@@ -1,4 +1,4 @@
-# It is a app to manage TODO tasks, workouts, youtube videos for myself
+# an app to manage Todo tasks, workouts, youtube videos for myself
 
 ### install ionic and cordova
 
