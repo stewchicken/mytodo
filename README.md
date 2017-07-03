@@ -16,24 +16,5 @@ $ ionic serve
 http://ionicframework.com/docs/intro/deploying/
 
 
-### add tasks
-![add tasks](image/addtask.png)
-
-
-### list tasks
-![list tasks](image/listtask.png)
-
-
-### delete task
-![delete task](image/deletetask.png)
-
-
-###  workouts
-![workout](image/workouts.png)
-
-### add delete list youtube videos
-![youtube](image/youtube.png)
-
-###  about
-![workout](image/about.png)
-
+### add, delete,list tasks, workouts, and youtube 
+![add tasks](image/todo.gif)
