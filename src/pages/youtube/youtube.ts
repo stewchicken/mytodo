@@ -19,6 +19,7 @@ export class YoutubePage {
     public navParams: NavParams,
     private taskService: TaskService) {
   }
+  
   ionViewDidLoad() {
     console.log('ionViewDidLoad YoutubePage');
     this.taskService.getVideos().then(
