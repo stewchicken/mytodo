@@ -32,6 +32,16 @@ export class YoutubePage {
     this.taskService.removeAllViedos();
     this.videos = [];
   }
+
+  delete(video) {
+    this.taskService.removeVideo(video).then(
+      (videos) => {
+        this.videos = videos;
+      }
+    );
+  }
+
+
   onAddYoutube(video: Video) {
     console.log(this.fForm);
     video.id = UUID.UUID();

@@ -21,7 +21,7 @@ export class TaskService {
         this.storage.set("tasks", this.tasks);
     }
 
-    removeVideo(video: Video) {
+   async removeVideo(video: Video) {
         let index = -1;
         for (let i = 0; i < this.videos.length; i++) {
             if (this.videos[i].id == video.id) {
@@ -32,6 +32,7 @@ export class TaskService {
             this.videos.splice(index, 1);
             this.storage.set('videos', this.videos);
         }
+        return this.videos;
 
     }
 

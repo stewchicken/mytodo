@@ -21,7 +21,10 @@ export class ContactPage {
   playTabata(name: string) {
     try {
       this.videoOptions = {
-        volume: 1.0
+        volume: 1.0,
+        scalingMode:2
+       // SCALING_MODE.SCALE_TO_FIT_WITH_CROPPING
+       // SCALE_TO_FIT default
       }
       let url = this.url + name;
       console.log(url);

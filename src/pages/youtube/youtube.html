@@ -34,5 +34,13 @@
       <iframe width="100%" height="315" [src]="video.video|youtubepipe" frameborder="0" allowfullscreen>
       </iframe>
     </ion-card-content>
+
+  <ion-row>
+    <ion-col>
+      <button ion-button color="primary" (click)="delete(video)"  clear small icon-start>
+        delete
+      </button>
+    </ion-col>
+</ion-row>
   </ion-card>
 </ion-content>
