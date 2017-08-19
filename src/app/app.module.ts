@@ -4,7 +4,9 @@ import { IonicStorageModule } from '@ionic/storage';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { VideoPlayer } from "@ionic-native/video-player";
+import { OrderModule } from 'ngx-order-pipe';
 //import { FileChooser } from '@ionic-native/file-chooser';
+//import {DatePicker} from '@ionic-native/date-picker';
 
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
@@ -32,6 +34,7 @@ import { YoutubepipePipe } from '../pipes/youtubepipe/youtubepipe';
   ],
   imports: [
     BrowserModule,
+    OrderModule,
     IonicStorageModule.forRoot(),
     IonicModule.forRoot(MyApp)
   ],

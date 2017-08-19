@@ -1,18 +1,18 @@
 <ion-header>
   <ion-navbar>
-     <ion-buttons end>
+    <ion-buttons end>
       <button ion-button icon-only (click)="onLoadNewTask()">
       <ion-icon name="add" ></ion-icon>
       </button>
     </ion-buttons>
-    <ion-title>Todos</ion-title>
+    <ion-title>Todos : Date
+    </ion-title>
   </ion-navbar>
 </ion-header>
-
 <ion-content>
   <ion-list inset>
-    <button ion-item *ngFor="let task of tasks" (click)="itemSelected(task)">
-    {{ task.title }}
+    <button ion-item *ngFor="let task of tasks | orderBy: 'date' : reverse " (click)="itemSelected(task)">
+     {{ task.title }}     {{task.date}} 
   </button>
   </ion-list>
 </ion-content>

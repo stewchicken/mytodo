@@ -29,6 +29,7 @@
         "angular2-uuid": "^1.1.1",
         "com.moust.cordova.videoplayer": "https://github.com/moust/cordova-plugin-videoplayer.git",
         "cordova-android": "^6.2.3",
+        "cordova-ios": "^4.4.0",
         "cordova-plugin-console": "^1.0.5",
         "cordova-plugin-device": "^1.1.4",
         "cordova-plugin-filechooser": "^1.0.1",
@@ -39,14 +40,18 @@
         "ionic-angular": "3.4.2",
         "ionic-plugin-keyboard": "^2.2.1",
         "ionicons": "3.0.0",
+        "ng2-order-pipe": "^0.1.5",
+        "ngx-order-pipe": "^1.0.2",
+        "run": "^1.4.0",
         "rxjs": "5.4.0",
         "sw-toolbox": "3.6.0",
         "zone.js": "0.8.12"
     },
     "devDependencies": {
         "@ionic/app-scripts": "1.3.7",
-        "@ionic/cli-plugin-cordova": "1.4.0",
-        "@ionic/cli-plugin-ionic-angular": "1.3.1",
+        "@ionic/cli-plugin-cordova": "1.4.1",
+        "@ionic/cli-plugin-ionic-angular": "1.3.2",
+        "ionic": "3.9.2",
         "typescript": "2.3.3"
     },
     "description": "An Ionic project",
@@ -62,7 +67,8 @@
             "cordova-plugin-filechooser": {}
         },
         "platforms": [
-            "android"
+            "android",
+            "ios"
         ]
     }
 }

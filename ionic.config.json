@@ -1,5 +1,8 @@
 {
   "name": "mytodo",
-  "app_id": "",
-  "type": "ionic-angular"
+  "app_id": "61a004cd",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
 }

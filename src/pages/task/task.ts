@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { TaskService } from "../../service/task.service";
 import { Task } from "../../model/task.model";
+import { DatePicker } from '@ionic-native/date-picker';
 
 
 @Component({

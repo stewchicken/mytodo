@@ -12,10 +12,14 @@ import { TaskPage } from "../task/task";
 
 export class HomePage {
   tasks: Task[];
+  reversex: boolean = false;
   constructor(public navCtrl: NavController, private taskService: TaskService) {
 
   }
 
+  setOrder() {
+    this.reversex=!this.reversex;
+  }
 
   ionViewWillEnter() {
     console.log("Homepage is entered");
